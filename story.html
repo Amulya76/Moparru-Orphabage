@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOPARRU ORPHANAGE</title>
+  <link rel="short icon" href="mop.png" type="image/png">
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fonts and basic styling */
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      background: linear-gradient(135deg, #ffcc00, #ff6f00);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      border-radius: 50%;
+      max-height: 80px;
+      margin-right: 10px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .menu {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .menu li {
+      margin-right: 20px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+
+    .menu li a:hover {
+      color: #ffd700;
+    }
+
+    /* Main content section */
+    .content {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .h {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .container img {
+      height: 250px;
+      border-radius: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: justify;
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    /* Button styles */
+    .btn {
+      background-color: #ffd700;
+      color: #333;
+      border: none;
+      padding: 12px 24px;
+      margin-top: 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #ffa500;
+    }
+
+    /* Footer styles */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-left, .footer-right {
+      flex: 1;
+    }
+
+    .footer h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .footer p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      color: #fff;
+      font-size: 1rem;
+      margin-right: 15px;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #ffd700;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #666;
+      font-size: 0.8rem;
+    }
+
+    /* Example of a media query */
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px wide */
+  .menu {
+    flex-direction: column; /* Example of changing layout */
+  }
+}
+
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="mop.png" alt="MOPARRU ORPHANAGE Logo" class="logo-img">
+      <h1 class="logo">MOPARRU ORPHANAGE</h1>
+    </div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="getinvolved.html">Get Involved</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <div class="buttons">
+      <a href="https://www.paypal.com/paypalme/rajupallikonda" class="btn donate-btn" target="_blank">Donate</a>
+      <a href="contactus.html" class="btn contact-btn">Contact Us</a>
+      <button class="btn back-btn" onclick="goBack()">Back</button>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h1 class="h">Stories Of children</h1>
+
+    <div class="container">
+      <img src="das.jpg" alt="Home Image">
+      <p class="p"><strong>Mohan Das</strong><br>
+        7 years old<br>
+        Staying at Moparru orphanage for 1  years<br>
+        Studying in Primary school<br>
+        Wants to be in the police<br>
+        Favourite colour is blue<br>
+        Family is too poor to care for Mohandas full time</p>
+    </div>
+
+
+    <div class="container">
+      <img src="uday.jpg" alt="Home Image">
+      <p class="p"><strong>UDAY</strong><br>
+        18 years old<br>
+        Staying at Moparru Orphanage for 10 years<br>
+        Studying Maths in college<br>
+        Wants to work in IT<br>
+        Favorite color is red<br>
+        He is at the orphanage because his father is disabled and his family is poor</p>
+    </div>
+
+    <div class="container">
+      <img src="dani.jpg" alt="Home Image">
+      <p class="p"><strong>Dani</strong><br>
+        16 years old<br>
+        Staying at Moparru orphanage for 6 years<br>
+        Studying in high school<br>
+        Wants to be a bank manager<br>
+        Favourite colour is green<br>
+        He is at the orphanage because his family are poor and his parents are handicapped</p>
+    </div>
+
+    <div class="container">
+      <img src="archana.jpg" alt="Home Image">
+      <p class="p"><strong>Archana</strong><br>
+        10 years old<br>
+        Staying at Moparru orphanage for 2 years<br>
+        Studying in high school<br>
+        Wants to be a Teacher<br>
+        Favourite colour is pink<br>
+        Archana is Dani's sister</p>
+    </div>
+
+    <div class="container">
+      <img src="moni.jpg" alt="Home Image">
+      <p class="p"><strong>Mounika and Sudherbabu</strong><br>
+        Mounika: 17 years old and Sudherbabu: 10 years old<br>
+        Mounika: Staying at Moparru orphanage for 8 years and Sudherbabu: Staying at Moparru orphanage for 3 years<br>
+        Both are Studying in high school<br>
+        Mounika: Wants to be a nurse and Sudherbabu: Wants to join the army<br>
+        Mounika: Favourite colour is green and Sudherbabu: Favourite colour is White<br>
+        Their family is too poor to care for them full time and they are going to fieldwork and are not home</p>
+
+    </div>
+
+    <div class="container">
+      <img src="yeswanth.jpg" alt="Home Image">
+      <p class="p"><strong>Yeswanth</strong><br>
+        7 years old<br>
+        Staying at Moparru orphanage for 1  years<br>
+        Studying in Primary school<br>
+        Wants to work for the government<br>
+        Favourite colour is red<br>
+        Family is too poor to care for yeswanth full time and brother of Mohan Das </p>
+    </div>
+
+
+    <div style="text-align: center;">
+      <a href="volunteer.html" class="btn-link">
+        <button class="btn donate-btn">Enquire Now</button>
+      </a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:moparruorphanage@gmail.com" style="color: white; text-decoration: none;">moparruorphanage.com</a></p>
+        <p>Moparru, Andhra Pradesh, India</p>
+      </div>
+      <div class="footer-right">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">Moparru Orphanage<i class="fa fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Moparru Orphanage. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOPARRU ORPHANAGE</title>
+  <link rel="short icon" href="mop.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif; 
+    }
+
+    /* Basic styling for the navbar */
+    .navbar {
+      background: linear-gradient(135deg, #ffcc00, #ff6f00); /* Gradient background */
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+      position: relative;
+      z-index: 1; /* Ensure navbar stays on top */
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand .logo-img {
+      border-radius: 50%;
+      max-height: 80px; /* Adjust max height of the logo image */
+      margin-right: 10px; /* Add margin between logo text and image */
+    }
+
+    .navbar-brand .logo {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .menu {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .menu li {
+      margin-right: 20px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+
+    .menu li a:hover {
+      color: #ffd700; /* Change to desired hover color */
+    }
+
+    .about-section {
+      background-color: #e9eff6; /* Light background color */
+      border-radius: 60px; /* Rounded corners for the section */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      padding: 30px; 
+      height: 930px;
+      padding-top: 30px;
+      padding-bottom: 30px;/* Add padding for section content */
+      margin: 20px auto; /* Added margin to center section */
+      max-width: 900px; /* Limited max width for content */
+    }
+ 
+    .about-content {
+      border-radius: 50px;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffd700;
+      
+    }
+
+    .about-text {
+      flex: 1;
+      padding: 20px; /* Padding for text content */
+    }
+
+    .about-image-container {
+      flex: 1;
+      text-align: center; /* Center align image */
+    }
+
+    .about-image {
+      width: 100%; /* Ensure the image fills its container */
+      max-width: 100%; /* Ensure the image does not exceed its container */
+      height: auto; /* Allow the height to adjust proportionally */
+      border-radius: 10px; /* Adds rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    }
+
+    .content {
+      font-size: 1.1rem; /* Paragraph text size */
+      line-height: 1.6; /* Line spacing */
+      color: #555; /* Medium dark text color */
+      margin-bottom: 10px; /* Reduced space below paragraphs */
+      text-align: justify; /* Justify text for a cleaner look */
+    }
+
+    .container {
+  display: flex;
+  justify-content: space-between; /* Positions items with space between them */
+  align-items: center; /* Centers items vertically */
+  padding: 0;
+}
+
+.content {
+  flex: 1; /* Takes up remaining space */
+}
+
+.p {
+  text-align: justify; /* Justify text for a cleaner look */
+  line-height: 1.6; /* Line spacing */
+  font-size: 1.1rem; /* Adjust as needed */
+}
+
+img {
+  border-radius: 5px; /* Adds rounded corners to the image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  max-width: 100%; /* Ensures image does not exceed its container */
+  height: 300px; /* Allows the height to adjust proportionally */
+  margin-right: 20px; /* Adds space between image and text */
+}
+
+    /* Footer styles */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center; /* Center align footer content */
+    }
+
+    .footer-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-left, .footer-right {
+      flex: 1;
+    }
+
+    .footer h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .footer p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      color: #fff;
+      font-size: 1rem;
+      margin-right: 15px;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #ffd700;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #666;
+      font-size: 0.8rem;
+    }
+
+    .btn {
+      background-color: #ffd700;
+      color: #333;
+      border: none;
+      padding: 12px 24px;
+      margin-top: 20px; /* Added margin to separate buttons */
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+      display: inline-block; /* Ensures button stays inline */
+    }
+
+    .btn:hover {
+      background-color: #ffa500; /* Darker yellow on hover */
+    }
+
+    .buttons-item {
+      text-align: center; /* Center align buttons */
+    }
+
+    .btn.back-btn {
+    padding: 14px 20px; /* Example: Smaller padding */
+    font-size: 14px; /* Example: Smaller font size */
+  }
+
+
+    .h {
+      text-align: center;
+    }
+
+    /* Example of a media query */
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px wide */
+  .menu {
+    flex-direction: column; /* Example of changing layout */
+  }
+}
+
+   
+    </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-image">
+    <nav class="navbar">
+      <div class="navbar-brand"> 
+        <img src="mop.png" alt="MOPARRU ORPHANAGE Logo" class="logo-img">
+        <h1 class="logo">MOPARRU ORPHANAGE</h1>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+       
+        <li><a href="about.html">About</a></li>
+        
+        <li>
+          <a href="getinvolved.html">Get Involved</a>
+        </li>
+        <li>
+          <a href="news.html">News</a>
+        </li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+      <div class="buttons">
+        <a href="https://www.paypal.com/paypalme/rajupallikonda" class="btn donate-btn" target="_blank">
+          Donate
+        </a>
+        <a href="contactus.html" class="btn contact-btn">Contact Us</a>
+        <button class="btn back-btn" onclick="goBack()">Back</button>
+      </div>
+      
+    </nav>
+    
+    <div class="content">
+      <h1 class="h">Testimonials</h1>
+      <div class="container">
+       
+          <img src="tara.jpg" alt="Home Image" height="250px" style="padding-left: 20px;">
+          
+          <p class="p"> <u><b><i>Tara Lc </i></b></u> <br>This is my third time visiting Moparru orphanage and every time is as magical as the last. It is without doubt, one of the best places to volunteer - Raju and Lavanya go above and beyond to help you and of course care for the children.<br>
+  
+          I feel completely safe when I volunteer here - I have been involved in teaching, painting projects, helping around the orphanage and of course playing games with the children. That being said - Moparru really needs help every month to improve their financial situation. Funds are tight and sometimes the situation is not good. An increase in sponsorship and volunteering would make such a huge difference.<br>
+  
+          Most other places that you volunteer at are run like a business - this is not. It is clear that Moparru orphanage have the children's best interests at heart, it is an ethical place to volunteer and I look forward to coming every single time. Many children go on to further education which shows the dedication of the team in helping every child to thrive in their surroundings. There is so much fun at Moparru and I urge everyone to come and volunteer here, you won't regret it!</p>
+      
+        </div>
+  
+      <div style="text-align: center;">
+        <a href="volunteer.html" class="btn-link">
+          <button class="btn donate-btn">Enquire Now</button>
+        </a>
+      </div>
+      
+  </div>
+  
+
+  <script>
+
+  
+      function goBack() {
+        window.history.back();
+      }
+   
+   
+  
+  </script>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:moparruorphanage@gmail.com" style="color: white; text-decoration: none;">moparruorphanage.com</a></p>
+
+        <p>Moparru, Andhra Pradesh, India</p>
+      </div>
+      <div class="footer-right">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#"> Moparru Orphanage<i class="fa fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Moparru Orphanage. All rights reserved.</p>
+    </div>
+  </footer>
+  
+</body>
+</html>

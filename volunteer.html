@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOPARRU ORPHANAGE</title>
+  <link rel="short icon" href="mop.png" type="image/png">
+  <link rel="short icon" href="mop.png" type="image/png">
+  <style>
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+/* Basic styling for the navbar */
+.navbar {
+  background: linear-gradient(135deg, #ffcc00, #ff6f00); /* Gradient background */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  position: relative;
+  z-index: 1; /* Ensure navbar stays on top */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .logo-img {
+  border-radius: 90px;
+  max-height: 80px; /* Adjust max height of the logo image */
+  margin-right: 10px; /* Add margin between logo text and image */
+}
+
+.navbar-brand .logo {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ffd700; /* Change to desired hover color */
+}
+
+
+.about-section {
+  background-color: #f8f9fa; /* Light background color */
+  border-radius: 10px; /* Rounded corners for the section */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 50px;
+  font-size: 18px;/* Add padding for section content */
+}
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6; /* Adjust line spacing here */
+  color: #555;
+  margin-bottom: 0px;
+  padding: 20px;
+  
+}
+
+.content p {
+  margin-bottom: 50px;
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.3; 
+  /* Adjust line spacing for headings */
+}
+
+.content h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.4; /* Adjust line spacing for subheadings */
+}
+
+
+
+.teaching {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.work {
+  padding: 9px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.background-img {
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: black;
+  border-color: yellowgreen;
+}
+
+.background-img1 {
+  width: 630px;
+  border-radius: 20px;
+}
+
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ffd700;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #666;
+  font-size: 0.8rem;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: transparent;
+  color: white;
+  
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 12px 24px;
+  margin-left: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffa500; /* Darker yellow on hover */
+}
+
+.buttons-item {
+  padding-left: 600px;
+}
+
+/* Example of a media query */
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px wide */
+  .menu {
+    flex-direction: column; /* Example of changing layout */
+  }
+}
+
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img src="mop.png" alt="MOPARRU ORPHANAGE Logo" class="logo-img">
+        <h1 class="logo">MOPARRU ORPHANAGE</h1>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+       
+        <li><a href="about.html">About</a></li>
+        
+        <li>
+          <a href="getinvolved.html">Get Involved</a>
+        </li>
+        <li>
+          <a href="news.html">News</a>
+        </li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+      <div class="buttons">
+        <a href="https://www.paypal.com/paypalme/rajupallikonda" class="btn donate-btn" target="_blank">
+          Donate
+        </a>
+        <a href="contactus.html" class="btn contact-btn">Contact Us</a>
+        <button class="btn back-btn" onclick="goBack()">Back</button>
+      </div>
+    
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="about-section">
+     
+      <div class="about-content">
+        <div class="about-text">
+          <h1 style="text-align: center;"> Volunteering Opportunities </h1>
+        <img src="tara.jpg" alt="Home Image" class="background-img">
+        <img src="group1.jpg" alt="Home Image" class="background-img1">
+        <img src="group2.jpg" alt="Home Image" class="background-img">
+          <p class="content">
+           
+            <p>Over the years, there have been a number of volunteers who have visited Moparru orphanage. Some have done some teaching in the local school, others have helped with small project work and all have enjoyed spending time with the children. </p>
+            
+           <p> When you volunteer here, we will arrange for your safe pickup from the airport (Vijayawada) back to the orphanage where you will have your own room. You can choose one of the options below or may decide to do more than one option during your stay. </p>
+
+            <p>All we ask is that you book your flights yourself, have the relevant vaccinations and travel insurance and we will support you with accommodation and food during your stay.</p>
+            <div class="teaching" margin-top="20px">
+            <h2>Option 1 - teaching volunteering opportunity  </h2>
+          </div>
+           
+           <p> Within this option, you can teach english or another subject of your choice at the local school as arranged by Raju. You will be accompanied to the school each day and will receive lunch there, with breakfast and dinner being served at the orphanage. </p>
+          <div class="work" padding-top="20px">
+           <h3> Option 2 - project work volunteering opportunity </h3>
+          </div>
+          <p>
+            Within this option, you can get involved in project work at the orphanage. Depending on when you volunteer, you may like to get involved in painting or general house maintenance around the orphanage. There are always things to be done and when you arrange to volunteer with us, you will be contacted and we can discuss the things that you might like to get involved in. 
+          </p>
+          <h2>Can do Together</h2>
+        </div>
+        
+      </div>
+      <div class="buttons-item">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfIZf3ums3xnx6Wh2e-BGhgHiIHNUSGwYdB_8nKVsCf_njVA/viewform?usp=sf_link" target="_blank" class="btn donate-btn">Enquiry Form</a> 
+      </div>
+      
+    </section>
+  </main>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:moparruorphanage@gmail.com" style="color: white; text-decoration: none;">moparruorphanage.com</a></p>
+
+        <p>Moparru, Andhra Pradesh, India</p>
+      </div>
+      <div class="footer-right">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">Moparru Orphanage<i class="fa fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Moparru Orphanage. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+/* Basic styling for the navbar */
+.navbar {
+  background: linear-gradient(135deg, #ffcc00, #ff6f00); /* Gradient background */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  position: relative;
+  z-index: 1; /* Ensure navbar stays on top */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .logo-img {
+  border-radius: 90px;
+  max-height: 80px; /* Adjust max height of the logo image */
+  margin-right: 10px; /* Add margin between logo text and image */
+}
+
+.navbar-brand .logo {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ffd700; /* Change to desired hover color */
+}
+
+
+
+/* Style for the content */
+.content {
+  max-width: 1000px;
+  margin: 0px auto;
+  text-align: center;
+  padding: 50px;
+  position: relative;
+  z-index: 1; /* Ensure content stays behind submenu */
+  color: #fff;
+  opacity: 1; /* Start with opacity 0 */
+  transform: translateY(-20px); /* Start slightly above its position */
+  transition: opacity 0.7s ease, transform 0.7s ease; 
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.content .par {
+  font-size: 1.1rem;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.content .par br {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 70px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content .par {
+    font-size: 1rem;
+  }
+}
+
+/* Fade in animation on load */
+.content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.background-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.background-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 12px 24px;
+  margin-left: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffa500; /* Darker yellow on hover */
+}
+
+.donate-button-container {
+  text-align: center; /* Center aligns the button horizontally */
+  margin-top: 20px; /* Adjust margin to move the button down */
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: left;
+  padding-left: 300px;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ffd700;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #666;
+  font-size: 0.8rem;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: transparent;
+  color: white;
+
+}
+
+/* Example of a media query */
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px wide */
+  .menu {
+    flex-direction: column; /* Example of changing layout */
+  }
+}
+
+

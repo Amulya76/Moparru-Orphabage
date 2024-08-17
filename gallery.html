@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOPARRU ORPHANAGE</title>
+  <link rel="short icon" href="mop.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif; 
+    }
+
+    /* Basic styling for the navbar */
+    .navbar {
+      background: linear-gradient(135deg, #ffcc00, #ff6f00); /* Gradient background */
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+      position: relative;
+      z-index: 1; /* Ensure navbar stays on top */
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand .logo-img {
+      border-radius: 50%;
+      max-height: 80px; /* Adjust max height of the logo image */
+      margin-right: 10px; /* Add margin between logo text and image */
+    }
+
+    .navbar-brand .logo {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .menu {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .menu li {
+      margin-right: 20px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+
+    .menu li a:hover {
+      color: #ffd700; /* Change to desired hover color */
+    }
+
+    .photo-gallery {
+      text-align: center; /* Center-align the entire gallery */
+      margin-bottom: 0;
+        /* Add margin at the bottom */
+    }
+
+    .photo-gallery h2 {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      margin-bottom: 20px; 
+      color: #f87c00; /* Adjust heading size as needed */
+    }
+
+    .gallery-item {
+      display: inline-block; /* Display items inline */
+      margin: 0 10px; /* Adjust margin between items */
+    }
+
+    .gallery-item img {
+      border-radius: 8px; /* Adds rounded corners to the images */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+      cursor: pointer; /* Add pointer cursor for clickable effect */
+    }
+
+    .btn {
+      background-color: #ffd700;
+      color: #333;
+      border: none;
+      padding: 12px 24px;
+      margin-top: 20px; /* Added margin to separate buttons */
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+      display: inline-block; /* Ensures button stays inline */
+    }
+
+    .btn:hover {
+      background-color: #ffa500; /* Darker yellow on hover */
+    }
+
+    .btn.back-btn {
+    padding: 14px 20px; /* Example: Smaller padding */
+    font-size: 14px; /* Example: Smaller font size */
+  }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center; /* Center align footer content */
+      margin-top: 40px; /* Add space at the top */
+    }
+
+    .footer-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-left, .footer-right {
+      flex: 1;
+    }
+
+    .footer h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .footer p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      color: #fff;
+      font-size: 1rem;
+      margin-right: 15px;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #ffd700;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #666;
+      font-size: 0.8rem;
+    }
+
+    /* Example of a media query */
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px wide */
+  .menu {
+    flex-direction: column; /* Example of changing layout */
+  }
+}
+
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-image">
+    <nav class="navbar">
+      <div class="navbar-brand"> 
+        <img src="mop.png" alt="MOPARRU ORPHANAGE Logo" class="logo-img">
+        <h1 class="logo">MOPARRU ORPHANAGE</h1>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="getinvolved.html">Get Involved</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+      <div class="buttons">
+        <a href="https://www.paypal.com/paypalme/rajupallikonda" class="btn donate-btn" target="_blank">
+          Donate
+        </a>
+        <a href="contactus.html" class="btn contact-btn">Contact Us</a>
+        <button class="btn back-btn"  onclick="goBack()" >Back</button>
+      </div>
+    </nav>
+   
+    <div class="photo-gallery">
+      <h2>Tara 2024</h2>
+      <div class="gallery-item">
+        <img src="tara.jpg" alt="Tara 2024" height="250px" onclick="downloadImage('tara.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="tara1.jpg" alt="Tara 2024" height="250px" onclick="downloadImage('tara1.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="tara2.JPG" alt="Tara 2024" height="250px" onclick="downloadImage('tara2.JPG')">
+      </div>
+      <div class="gallery-item">
+        <img src="tara4.JPG" alt="Tara 2024" height="250px" onclick="downloadImage('tara4.JPG')">
+      </div>
+      <div class="gallery-item">
+        <img src="tara3.jpg" alt="Tara 2024" height="250px" onclick="downloadImage('tara3.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="tara5.jpg" alt="Tara 2024" height="250px" onclick="downloadImage('tara5.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="tara6.jpg" alt="Tara 2024" height="250px" onclick="downloadImage('tara6.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="tara7.jpg" alt="Tara 2024" height="250px" onclick="downloadImage('tara6.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="tara8.jpg" alt="Tara 2024" height="250px" onclick="downloadImage('tara6.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="tara9.jpg" alt="Tara 2024" height="250px" onclick="downloadImage('tara6.jpg')">
+      </div>
+    </div>
+
+    <div class="photo-gallery">
+      <h2>Gallery Of Moparru Children till 2024</h2>
+      <div class="gallery-item">
+        <img src="g1.jpg" alt="Moparru Children" height="250px" onclick="downloadImage('g1.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="g3.jpg" alt="Moparru Children" height="250px" onclick="downloadImage('g3.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="g4.jpg" alt="Moparru Children" height="250px" onclick="downloadImage('g4.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="g5.jpg" alt="Moparru Children" height="250px" onclick="downloadImage('g5.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="g6.jpg" alt="Moparru Children" height="250px" onclick="downloadImage('g6.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="g9.jpg" alt="Moparru Children" height="250px" onclick="downloadImage('g9.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="g7.jpg" alt="Moparru Children" height="250px" onclick="downloadImage('g7.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="g8.jpg" alt="Moparru Children" height="250px" onclick="downloadImage('g8.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="g10.jpg" alt="Moparru Children" height="250px" onclick="downloadImage('g10.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="g11.jpg" alt="Moparru Children" height="250px" onclick="downloadImage('g11.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="group2.jpg" alt="Moparru Children" height="250px" onclick="downloadImage('g11.jpg')">
+      </div>
+      <div class="gallery-item">
+        <img src="92.jpg" alt="Moparru Children" height="250px" onclick="downloadImage('g11.jpg')">
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+      <a href="volunteer.html" class="btn-link">
+        <button class="btn donate-btn">Enquire Now</button>
+      </a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:moparruorphanage@gmail.com" style="color: white; text-decoration: none;">moparruorphanage@gmail.com</a></p>
+
+        <p>Moparru, Andhra Pradesh, India</p>
+      </div>
+      <div class="footer-right">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+            <p><a href="https://www.facebook.com/arc.moparru" target="_blank">Facebook: Moparru Orphanage <i class="fa fa-facebook"></i></a></p>
+        </div>
+    </div>
+    
+    
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Moparru Orphanage. All rights reserved.</p>
+    </div>
+  </footer>
+  
+</body>
+</html>
+
+  <script>
+    function downloadImage(imageName) {
+      if (confirm(`Do you want to download ${imageName}?`)) {
+        const imgSrc = imageName; // Assuming all images are in the same directory
+        const anchor = document.createElement('a');
+        anchor.style.display = 'none';
+        anchor.href = imgSrc;
+        anchor.download = imageName;
+        document.body.appendChild(anchor);
+        anchor.click();
+        document.body.removeChild(anchor);
+      }
+    }
+
+    function goBack() {
+    window.history.back();
+  }
+  
+  </script>
+

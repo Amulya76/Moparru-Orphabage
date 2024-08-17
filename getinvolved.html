@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> MOPARRU ORPHANAGE</title>
+  <link rel="short icon" href="mop.png" type="image/png">
+  <style>
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+/* Basic styling for the navbar */
+.navbar {
+  background: linear-gradient(135deg, #ffcc00, #ff6f00); /* Gradient background */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  position: relative;
+  z-index: 1; /* Ensure navbar stays on top */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .logo-img {
+  border-radius: 90px;
+  max-height: 80px; /* Adjust max height of the logo image */
+  margin-right: 10px; /* Add margin between logo text and image */
+}
+
+.navbar-brand .logo {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ffd700; /* Change to desired hover color */
+}
+.background-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 40vh;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.background-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.get-involved-section {
+  background-size: 990px;
+  background-position: 1000px;
+  max-width: 900px;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.container {
+  width: 30%;
+  padding: 35px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 1 1 40px rgba(10%, 10%, 0, 10s);
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+  .container.highlighted {
+    border-color: #ffcc00;
+    box-shadow: #666;
+}
+
+.container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.btn {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 12px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #ffa500;
+}
+
+/* Different border styles for each container */
+.container:nth-child(odd) {
+  border: 2px solid #ff6f00; /* Orange border for odd containers */
+}
+
+.container:nth-child(even) {
+  border: 2px solid #ffcc00; /* Yellow border for even containers */
+}
+
+
+.buttons {
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffa500; /* Darker yellow on hover */
+}
+
+.highlight {
+  font-weight: bold;
+  color: #ffc107;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ffd700;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #666;
+  font-size: 0.8rem;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: transparent;
+  color: white;
+  
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 12px 24px;
+  margin-left: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffa500; /* Darker yellow on hover */
+}
+
+.heading {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.get {
+  font-size: 20px;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+
+/* Example of a media query */
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px wide */
+  .menu {
+    flex-direction: column; /* Example of changing layout */
+  }
+}
+
+
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img src="mop.png" alt="MOPARRU ORPHANAGE Logo" class="logo-img">
+        <h1 class="logo">MOPARRU ORPHANAGE</h1>
+     
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+       
+        <li><a href="about.html">About</a></li>
+        
+        <li>
+          <a href="getinvolved.html">Get Involved</a>
+        </li>
+        <li>
+          <a href="news.html">News</a>
+        </li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+      <div class="buttons">
+        <a href="https://www.paypal.com/paypalme/rajupallikonda" class="btn donate-btn" target="_blank">
+          Donate
+        </a>
+        <a href="contactus.html" class="btn contact-btn">Contact Us</a>
+        <button class="btn back-btn" onclick="goBack()">Back</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="get-involved-section">
+    <h1 class="heading">Get Involved</h1>
+    <p class="get">There are lots of ways that you can support Moparru orphanage.</p>
+    <img src="hand.jpg" alt="Home Image" class="background-img">
+    <div class="container" onclick="highlight(this)">
+      <h2>Donate for Items</h2>
+      <div class="buttons">
+        <a href="donateanitem.html" class="btn donate-btn">Donate Now</a>
+      </div>
+    </div>
+    
+    <div class="container" onclick="highlight(this)">
+      <h2>Sponsor a Project</h2>
+      <div class="buttons">
+        <a href="project.html" class="btn donate-btn">Donate Now</a>
+      </div>
+    </div>
+    
+    <div class="container" onclick="highlight(this)">
+      <h2>Sponsor a Child</h2>
+      <div class="buttons">
+        <a href="sponsor.html" class="btn volunteer-btn">Sponsor Now</a>
+      </div>
+    </div>
+    
+    <div class="container" onclick="highlight(this)">
+      <h2>Volunteer Opportunities</h2>
+      <div class="buttons">
+        <a href="volunteer.html" class="btn volunteer-btn">Enquire Now</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const containers = document.querySelectorAll('.container');
+
+  containers.forEach(function(container) {
+    container.addEventListener('click', function() {
+      // Remove 'highlight' class from all containers
+      containers.forEach(function(c) {
+        c.classList.remove('highlight');
+      });
+
+      // Add 'highlight' class to the clicked container
+      container.classList.add('highlight');
+    });
+  });
+});
+
+function goBack() {
+        window.history.back();
+      }
+
+  </script>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:moparruorphanage@gmail.com" style="color: white; text-decoration: none;">moparruorphanage@gmail.com</a></p>
+
+      <p>Moparru, Andhra Pradesh, India</p>
+    </div>
+    <div class="footer-right">
+      <h3>Follow Us</h3>
+      <div class="social-links">
+          <p><a href="https://www.facebook.com/arc.moparru" target="_blank">Facebook: Moparru Orphanage <i class="fa fa-facebook"></i></a></p>
+      </div>
+  </div>
+  
+  
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Moparru Orphanage. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

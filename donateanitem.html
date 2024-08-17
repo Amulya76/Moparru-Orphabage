@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOPARRU ORPHANAGE</title>
+  <link rel="short icon" href="mop.png" type="image/png">
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif; 
+    }
+
+    /* Basic styling for the navbar */
+    .navbar {
+      background: linear-gradient(135deg, #ffcc00, #ff6f00); /* Gradient background */
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+      position: relative;
+      z-index: 1; /* Ensure navbar stays on top */
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand .logo-img {
+      border-radius: 50%;
+      max-height: 80px; /* Adjust max height of the logo image */
+      margin-right: 10px; /* Add margin between logo text and image */
+    }
+
+    .navbar-brand .logo {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .menu {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .menu li {
+      margin-right: 20px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+
+    .menu li a:hover {
+      color: #ffd700; /* Change to desired hover color */
+    }
+
+    .about-section {
+  background-color: #e9eff6;
+  border-radius: 60px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 900px;
+  overflow: hidden; 
+  background: linear-gradient(rgb(193, 246, 119), rgb(131, 234, 230));/* Ensure content doesn't overflow */
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1 1 60%; /* Adjust flex properties to control width */
+  padding-right: 20px; /* Add spacing between text and image */
+}
+
+.about-image-container {
+  flex: 1 1 40%; /* Adjust flex properties to control width */
+  text-align: center;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.thank {
+  text-align: center;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+    /* Footer styles */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center; /* Center align footer content */
+    }
+
+    .footer-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-left, .footer-right {
+      flex: 1;
+    }
+
+    .footer h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .footer p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      color: #fff;
+      font-size: 1rem;
+      margin-right: 15px;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #ffd700;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #666;
+      font-size: 0.8rem;
+    }
+
+    .btn {
+      background-color: #ffd700;
+      color: #333;
+      border: none;
+      padding: 12px 24px;
+      margin-top: 20px; /* Added margin to separate buttons */
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+      display: inline-block; /* Ensures button stays inline */
+    }
+
+    .btn:hover {
+      background-color: #ffa500; /* Darker yellow on hover */
+    }
+
+    .buttons-item {
+      text-align: center; /* Center align buttons */
+    }
+
+    .btn.back-btn {
+    padding: 14px 20px; /* Example: Smaller padding */
+    font-size: 14px; /* Example: Smaller font size */
+  }
+
+
+     /* Add margin-bottom to h2 headings */
+     h2 {
+      margin-top: 20px; 
+ /* Adjust as needed */
+    }
+
+    /* Add padding to ul elements */
+    ul {
+      padding-left: 20px; 
+ /* Adjust padding as needed */
+    }
+
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img src="mop.png" alt="MOPARRU ORPHANAGE Logo" class="logo-img">
+        <h1 class="logo">MOPARRU ORPHANAGE</h1>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="getinvolved.html">Get Involved</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+      <div class="buttons">
+        <a href="https://www.paypal.com/paypalme/rajupallikonda" class="btn donate-btn" target="_blank">
+          Donate
+        </a>
+        <a href="contactus.html" class="btn contact-btn">Contact Us</a>
+        <button class="btn back-btn" onclick="goBack()">Back</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="about-section">
+      <div class="about-content">
+        <div class="about-text">
+          <h1 style="text-align: center;">Donate Items</h1>
+          <p class="content">
+            You can donate for specific items to be purchased, many of which are in short supply in the orphanage so your contribution will go a long way to help the children with keeping fed, well equipped for school and ensuring their hygiene is good. <br>Items you can donate include Rice Bags, Clothes, Groceries, Soaps, School Items (Notebooks, Pens, etc.), and Toys.
+           
+          </p>
+          
+
+        </div>
+        <div class="about-section">
+          <div class="about-image-container">
+            <p> "All the prices below are estimated for one week and for 40 children. Approximately 100 INR = 1 GBP (&pound;)."</p>
+            <p>Please choose the amount to donate and click on the donate button to proceed.</p>
+            <img src="items.png" alt="Donated Items" class="about-image">
+          </div>
+          <h2>Food Items</h2>
+          <ul id="foodItems">
+            <!-- List items will be added dynamically using JavaScript -->
+          </ul>
+      
+          <h2>Educational Items</h2>
+          <ul id="educationalItems">
+            <!-- List items will be added dynamically using JavaScript -->
+          </ul>
+      
+          <h2>Health Items</h2>
+          <ul id="healthItems">
+            <!-- List items will be added dynamically using JavaScript -->
+          </ul>
+      
+          <h2>Household Items</h2>
+          <ul id="householdItems">
+            <!-- List items will be added dynamically using JavaScript -->
+          </ul>
+      
+          <h2>School Supplies</h2>
+          <ul id="schoolSupplies">
+            <!-- List items will be added dynamically using JavaScript -->
+          </ul>
+      
+          <h2>Additional Items</h2>
+          <ul id="additionalItems">
+            <!-- List items will be added dynamically using JavaScript -->
+          </ul>
+         
+          <div class="thank">
+            <p>Thank You</p>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+  const items = {
+    "Food_Items": [
+      "Rice - 5 bags = ₹1200",
+      "Oil - 1 month = ₹1500",
+      "Chicken = ₹1500",
+      "Vegetables = ₹1000",
+      "Fish = ₹1500",
+      "Curd = ₹1000",
+      "Snacks = ₹500",
+      "Dahl = ₹500",
+      "Milk = ₹1400",
+      "Fresh Water = ₹200"
+    ],
+    "Household_Items": [
+      "Soap=150₹",
+      "Toothbrushes and Toothpaste=150₹",
+      "Washing soap=150₹",
+      "Talc=100₹",
+      "Coconut oil for hair=200₹"
+    ],
+    "Educational_Items": [
+      "Books for school - 1 pack = ₹200",
+      "Pens for school - 1 pack = ₹50"
+    ],
+    "Health_Items": [
+      "Medication = ₹200"
+    ],
+    "School_Supplies": [
+      "School bag - 1 bag = ₹500",
+      "Clothes (shirt, trousers) - 1 child = ₹1000",
+      "Shoes = ₹400"
+    ],
+    "Additional_Items": [
+      "College fee (including uniform and books) - 1 child for 1 year = ₹25000",
+      "Weekly maintenance for orphanage = ₹1000"
+    ]
+  };
+
+  // Function to populate items into their respective lists
+  function populateItems(category, itemsArray) {
+    const list = document.getElementById(category);
+    if (list) {
+      itemsArray.forEach(item => {
+        const listItem = document.createElement("li");
+        listItem.textContent = item;
+        list.appendChild(listItem);
+      });
+    } else {
+      console.error(`Element with ID '${category}' not found.`);
+    }
+  }
+
+  // Populate each category list
+  populateItems("foodItems", items.Food_Items);
+  populateItems("householdItems", items.Household_Items);
+  populateItems("educationalItems", items.Educational_Items);
+  populateItems("healthItems", items.Health_Items);
+  populateItems("schoolSupplies", items.School_Supplies);
+  populateItems("additionalItems", items.Additional_Items); // Changed from "Additional_Items" to "additionalItems"
+});
+
+      function goBack() {
+        window.history.back();
+      }
+  
+          </script>
+          <div class="buttons-item">
+            <a href="https://www.paypal.com/paypalme/rajupallikonda" class="btn donate-btn" target="_blank">
+              Donate
+            </a>
+          </div>
+        </div>
+      
+        
+     
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:moparruorphanage@gmail.com" style="color: white; text-decoration: none;">moparruorphanage@gmail.com</a></p>
+
+        <p>Moparru, Andhra Pradesh, India</p>
+      </div>
+      <div class="footer-right">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+            <p><a href="https://www.facebook.com/arc.moparru" target="_blank">Facebook: Moparru Orphanage <i class="fa fa-facebook"></i></a></p>
+        </div>
+    </div>
+    
+    
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Moparru Orphanage. All rights reserved.</p>
+    </div>
+  </footer>
+  
+</body>
+</html>
